@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="script.js"></script>
+    
+
+    <title>Weather App</title>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <span class="navbar-text">
+            Weather Dashboard
+        </span>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4">
+                <div>Search for a City:</div>
+                <div class="input-group mb-3">
+                    <input id="searchterm" type="text" class="form-control" placeholder="City Name" aria-label="Recipient's username"
+                        aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-8">
+                    <div id="city-name" class="row h2">Atlanta: Date</div>
+                    <div class='row' id="temp">Temperature:</div>
+                    <div class="row" id="humidity">Humidity:</div>
+                    <div id="wind" class='row'>Wind Speed:</div>
+                    <div id="uv" class='row'>UV Index:</div>
+                <div class="row h2" id="fiveday">5-Day Forecast:</div>
+                    <div id='day1' class='col-2'>Day-1</div>
+                    <div id='day2' class='col-2'>Day-2</div>
+                    <div id='day3' class='col-2'>Day-3</div>
+                <div id='day4' class='col-2'>Day-4</div>
+                <div id='day5' class='col-2'>Day-5</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
