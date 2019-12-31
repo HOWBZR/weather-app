@@ -1,10 +1,10 @@
 $(document).ready(function () {
     $('#fiveday').hide()
-    
+
 
     $('#button-addon2').on('click', function (event) {
         $('#fiveday').show()
-        
+
 
         event.preventDefault()
         let city = searchterm.value
@@ -50,10 +50,11 @@ $(document).ready(function () {
             }).then(function (response) {
                 $('#city-name').text(searchterm.value.toUpperCase() + ' ' + date)
                 $('#city-name').append('<img src=http://openweathermap.org/img/wn/' + response.list[0].weather[0].icon + '@2x.png>')
+                console.log(response)
 
                 for (let i = 0; i < 6; i++) {
-                    + ''
-                    let temps = (response.list[i].main.temp - 273) * 1.8 + 32
+                    
+                    let temps = Math.abs(response.list[i].main.temp - 273) * 1.8 + 32
                     let ftemps = temps.toFixed(2)
                     var dateF = (today.getMonth() + 1) + '/' + (today.getDate() + i) + '/' + today.getFullYear();
                     $('#date' + [i]).html(dateF)
@@ -70,7 +71,7 @@ $(document).ready(function () {
         function showMap(position) {
             // Show a map centered at (position.coords.latitude, position.coords.longitude).
         }
-        console.log(navigator.geolocation)
+        
         // One-shot position request.
         navigator.geolocation.getCurrentPosition(showMap);
     });
